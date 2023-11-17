@@ -1,0 +1,214 @@
+<nav class="xl:mx-[5vw] ml-[5vw] mr-[2vw] py-4 relative">
+  <div class="flex justify-between items-center">
+    <div>
+      <img src="./assets/pesepay-logo.svg" alt="" />
+    </div>
+
+    <!-- Hamburger icon -->
+    <div
+      class="w-[30px] h-[50px] cursor-pointer lg:hidden"
+      (click)="toggleIsOpen()"
+    >
+      <img
+        src="./assets/menu.svg"
+        alt=""
+        class="object-contain w-full h-full"
+      />
+    </div>
+    <!-- Hamburger ends here -->
+
+    <!-- Mobile Navigation -->
+
+    <div
+      *ngIf="isOpen"
+      class="absolute md:w-5/12 w-7/12 bg-white shadow-xl h-[100vh] top-0 right-0 px-6 py-5 lg:hidden mobile-nav-container animate-fade-in z-50"
+    >
+      <!-- x icon -->
+      <div class="w-full flex justify-end">
+        <div class="w-[30px] h-[50px] cursor-pointer">
+          <img
+            src="./assets/x.svg"
+            alt=""
+            class="object-contain w-full h-full"
+            (click)="toggleIsOpen()"
+          />
+        </div>
+      </div>
+      <!-- x icon end here -->
+
+      <!-- links -->
+      <div class="flex items-start flex-col gap-8">
+        <div>
+          <a
+            class="hover:text-darkViolet transition-all font-semibold"
+            routerLink="#"
+            >Home</a
+          >
+        </div>
+        <div class="relative group">
+          <a
+            routerLink="#"
+            class="group-hover:text-darkViolet transition-all font-semibold"
+            >Solutions</a
+          >
+          <div
+            class="py-8 absolute inset-0 hidden group-hover:block hover:block dropdown-content z-50"
+          >
+            <div class="bg-white w-[225px] shadow-md">
+              <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+                <a class="transition-all font-semibold" routerLink="#"
+                  >Online Payments</a
+                >
+              </div>
+              <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+                <a class="transition-all font-semibold" routerLink="#"
+                  >Recurring Payments</a
+                >
+              </div>
+              <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+                <a class="transition-all font-semibold" routerLink="#"
+                  >Bill Payments</a
+                >
+              </div>
+              <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+                <a class="transition-all font-semibold" routerLink="#"
+                  >Invoicing</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="hover:text-darkViolet transition-all font-semibold"
+            >Pricing</a
+          >
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="hover:text-darkViolet transition-all font-semibold"
+            >Company</a
+          >
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="hover:text-darkViolet transition-all font-semibold"
+            >FAQ</a
+          >
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="hover:text-darkViolet transition-all font-semibold"
+            >Documentation</a
+          >
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="hover:text-darkViolet transition-all font-semibold"
+            >Login</a
+          >
+        </div>
+        <div>
+          <a
+            routerLink="#"
+            class="text-white bg-appleGreen px-6 py-3 rounded-md font-semibold hover:bg-darkViolet transition-all"
+            >Create Free Account</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Navigation ends -->
+
+    <!-- Desktop navigation  Start here-->
+    <div class="lg:flex items-center xl:gap-8 gap-6 hidden">
+      <div>
+        <a
+          class="hover:text-darkViolet transition-all font-semibold"
+          routerLink="#"
+          >Home</a
+        >
+      </div>
+      <div class="relative group">
+        <a
+          routerLink="#"
+          class="group-hover:text-darkViolet transition-all font-semibold"
+          >Solutions</a
+        >
+        <div
+          class="py-8 absolute inset-0 hidden group-hover:block hover:block z-50"
+        >
+          <div class="bg-white w-[225px] shadow-md">
+            <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+              <a class="transition-all font-semibold" routerLink="#"
+                >Online Payments</a
+              >
+            </div>
+            <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+              <a class="transition-all font-semibold" routerLink="#"
+                >Recurring Payments</a
+              >
+            </div>
+            <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+              <a class="transition-all font-semibold" routerLink="#"
+                >Bill Payments</a
+              >
+            </div>
+            <div class="p-3 w-full hover:bg-darkViolet hover:text-white">
+              <a class="transition-all font-semibold" routerLink="#"
+                >Invoicing</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="hover:text-darkViolet transition-all font-semibold"
+          >Pricing</a
+        >
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="hover:text-darkViolet transition-all font-semibold"
+          >Company</a
+        >
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="hover:text-darkViolet transition-all font-semibold"
+          >FAQ</a
+        >
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="hover:text-darkViolet transition-all font-semibold"
+          >Documentation</a
+        >
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="hover:text-darkViolet transition-all font-semibold"
+          >Login</a
+        >
+      </div>
+      <div>
+        <a
+          routerLink="#"
+          class="text-white bg-appleGreen px-4 py-3 rounded-md font-semibold hover:bg-darkViolet transition-all"
+          >Create Free Account</a
+        >
+      </div>
+    </div>
+    <!-- Desktop Navigation ends here -->
+  </div>
+</nav>
